@@ -10,4 +10,11 @@ contract StorageFactory {
         SimpleStorage simpleStorage = new SimpleStorage();
         simpleStorageArray.push(simpleStorage);
     }
+
+    function sfStore(uint256 _simpleStorageIndex, uint256 _simpeStoragenumber) public {
+        //Address
+        //ABI
+        SimpleStorage simpleStorage = SimpleStorage(address(simpleStorageArray[_simpleStorageIndex]));
+        simpleStorage.store(_simpeStoragenumber);
+    }
 }
